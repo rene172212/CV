@@ -4,7 +4,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("hola-mundo",views.index),
-    path("acerca-de",views.about),
-    path("contacto",views.contact),
+    path("<int:menu>",views.menu_hoja_number,name="menu_hoja_number"),
+    path("<str:menu>",views.menu_hoja) #menu contacto
 ]
